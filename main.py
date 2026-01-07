@@ -1,6 +1,6 @@
-from io.file_reader import select_file, read_text
-from analysis.processing import clean_text, lemmatize_words, count_ngrams
-from output.output import print_top_ngrams
+from text_analyzer.io.file_reader import select_file, read_text
+from text_analyzer.analysis.processing import clean_text, lemmatize_words, count_ngrams
+from text_analyzer.output.output import print_top_ngrams
 
 def run():
     """
