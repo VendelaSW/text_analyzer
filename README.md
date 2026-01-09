@@ -38,14 +38,24 @@ text_analyzer/                  # Project root
 ├── pyproject.toml              # Package configuration
 ├── README.md                   # This file
 └── src/                        # Source directory
+    └── Logs/                   # Logs from Logger
     └── text_analyzer/          # Main package
         ├── __init__.py
         ├── __main__.py         # Module entry point
         ├── config.py           # Configuration & path handling
         ├── main.py             # Application workflow
-        ├── processing.py       # Text processing and TextAnalyzer class
+        └── analysis/
+            ├── processing.py   # Text processing and TextAnalyzer class
+            └── __init__.py
+        └── io/
+            ├── file_reader.py  # File opener and reader
+            └── __init__.py
+        └── output/
+            ├── output.py       # Output
+            └── __init__.py
         └── utils/
-            └── logger.py       # Logger utilities
+            ├── logger.py       # Logger utilities
+            └── __init__.py
 ```
 
 ## Key Features
