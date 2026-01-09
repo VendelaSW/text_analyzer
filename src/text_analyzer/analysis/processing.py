@@ -3,7 +3,7 @@ from collections import Counter
 import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords, wordnet
-
+from text_analyzer.utils.logger import log, debug, warning
 
 # Download necessary NLTK data
 nltk.download('averaged_perceptron_tagger_eng')
@@ -20,6 +20,11 @@ class TextAnalyzer:
         self.words = self._clean_text(text)
         self.lemmatized_words = self._lemmatize_words(self.words)
         self.ngram_counts = self._count_ngrams(self.lemmatized_words)
+
+        log(f"TextAnalyzer: {len(self.words)} words, {len(self.lemmatized_words)} lemmas processed")
+        log(f"TextAnalyzer: {len(self.ngram_counts['unigrams'])} unigrams, "
+            f"{len(self.ngram_counts['bigrams'])} bigrams, "
+            f"{len(self.ngram_counts['trigrams'])} trigrams counted")
 
     def _clean_text(self, text: str) -> list[str]:
         """Remove punctuation, lowercase, and remove stopwords."""

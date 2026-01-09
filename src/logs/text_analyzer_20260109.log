@@ -1,0 +1,5 @@
+2026-01-09 19:50:56,988 - INFO - Selected file: C:\Users\walta\OneDrive\Dokument\testfil.txt
+2026-01-09 19:50:57,000 - INFO - Text length: 3197 characters
+2026-01-09 19:50:58,461 - INFO - TextAnalyzer: 308 words, 308 lemmas processed
+2026-01-09 19:50:58,462 - INFO - TextAnalyzer: 43 unigrams, 8 bigrams, 1 trigrams counted
+2026-01-09 19:50:58,465 - INFO - Run complete
