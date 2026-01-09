@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/text_analyzer/__init__.py
+src/text_analyzer/__main__.py
+src/text_analyzer/config.py
+src/text_analyzer/main.py
+src/text_analyzer.egg-info/PKG-INFO
+src/text_analyzer.egg-info/SOURCES.txt
+src/text_analyzer.egg-info/dependency_links.txt
+src/text_analyzer.egg-info/top_level.txt
+src/text_analyzer/analysis/__init__.py
+src/text_analyzer/analysis/processing.py
+src/text_analyzer/io/__init__.py
+src/text_analyzer/io/file_reader.py
+src/text_analyzer/output/__init__.py
+src/text_analyzer/output/output.py
+src/text_analyzer/utils/__init__.py
