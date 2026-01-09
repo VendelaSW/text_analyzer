@@ -1,5 +1,5 @@
 from text_analyzer.io.file_reader import select_file, read_text
-from text_analyzer.analysis.processing import clean_text, lemmatize_words, count_ngrams
+from text_analyzer.analysis.processing import TextAnalyzer
 from text_analyzer.output.output import print_top_ngrams
 
 def run():
@@ -17,11 +17,14 @@ def run():
     text = read_text(file_path)
 
     # Step 3: Process text
-    words = clean_text(text)
-    lemmas = lemmatize_words(words)
-    ngram_counts = count_ngrams(lemmas)
+    analyzer = TextAnalyzer(text)
 
     # Step 4: Output results
-    print_top_ngrams(ngram_counts["unigrams"])
-    print_top_ngrams(ngram_counts["bigrams"])
-    print_top_ngrams(ngram_counts["trigrams"])
+    print("\nTop unigrams:")
+    print_top_ngrams(analyzer.ngram_counts["unigrams"])
+
+    print("\nTop bigrams:")
+    print_top_ngrams(analyzer.ngram_counts["bigrams"])
+
+    print("\nTop trigrams:")
+    print_top_ngrams(analyzer.ngram_counts["trigrams"])
